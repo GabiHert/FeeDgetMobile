@@ -35,4 +35,8 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.regular,
     width: "100%",
   },
+  footer: {
+    flexDirection: "row",
+    marginBottom: 16,
+  },
 });
