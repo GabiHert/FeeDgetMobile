@@ -5,6 +5,12 @@ import { styles } from "./styles";
 import { theme } from "../../theme";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
+import { Options } from "../options";
+import { Form } from "../form";
+
+import { feedbackTypes } from "../../utils/feedbackTypes";
+
+export type FeedbackType = keyof typeof feedbackTypes;
 
 function Widget() {
   const bottomsheetRef = useRef<BottomSheet>(null);
@@ -25,10 +31,11 @@ function Widget() {
       <BottomSheet
         ref={bottomsheetRef}
         snapPoints={[1, 280]}
-        children={() => {}}
         backgroundStyle={styles.modal}
         handleIndicatorStyle={styles.indicator}
-      />
+      >
+        <Form feedbackType="BUG" />
+      </BottomSheet>
     </>
   );
 }
