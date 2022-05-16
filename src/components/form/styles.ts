@@ -34,6 +34,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.text_primary,
     fontFamily: theme.fonts.regular,
     width: "100%",
+    textAlignVertical: "top",
   },
   footer: {
     flexDirection: "row",
